@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kedai Susu Murni</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">D <span>Susu</span></h1>
+    <nav class="menu" id="navMenu">
+      <a href="#">Beranda</a>
+      <a href="#menu">Menu</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+  
+
+  <main class="main-sections">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h2>
+          NIKMATI <span class="highlight">SUSU MURNI</span> <br />
+          DARI <span>KEDAI D SUSU</span>
+        </h2>
+        <p>
+          Buka setiap hari dari jam 14.00 sampai 22.00 WIB.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="suyog.jpg" alt="Kedai Susu Murni" />
+
+      </div>
+    </section>
+  
+<!-- Menu Section -->
+<section class="menu" id="menu">
+  <h2>Menu Kedai</h2>
+  <img src="menu suyog.jpg" alt="Menu Kedai" id="menuImage" style="cursor: pointer;" />
+</section>
+
+<!-- Modal (mulai hidden) -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg" />
+</div>
+
+  
+  <section id="kontak" class="kontak-section">
+    <h3>Hubungi Kami</h3>
+    <p>Untuk pemesanan atau informasi lebih lanjut, hubungi kami melalui WhatsApp:</p>
+    <a href="https://wa.me/6289517627375" target="_blank" class="wa-button">
+      📱 +62 895-1762-7375
+    </a>
+  </section>
+  
+
+  <footer>
+    © 2025 Kedai Susu Murni. All rights reserved.
+  </footer>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    // Dapatkan elemen
+    const modal = document.getElementById("imageModal");
+    const img = document.getElementById("menuImage");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+  
+    // Buka modal saat gambar diklik
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    };
+  
+    // Tutup modal saat tombol close diklik
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+  
+    // Tutup modal jika klik di luar gambar
+    modal.onclick = function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>  
+</body>
+</html>
