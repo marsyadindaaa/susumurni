@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Susu Murni </title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="suyog.jpg">
-
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!--tracker-->
-    <script type="module" src=""></script>
-
-    <!-- Google Analytics -->
-    <script async src=""></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-GK262JCDLG');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#about-section">About</a>
-        <a href="#skill-section">Skill</a>
-        <a href="#pendidikan-section">Education</a>
-        <a href="#project-section">Project</a>
-        <a href="#contact-section">Contact</a>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Layanan</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+    <div class="burger" id="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>Susu Murni</h1>
-            <p id="typing-text"></p> <!-- Efek mengetik -->
-        </header>
+  <section class="hero">
+    <h1>Selamat Datang di Landing Page Kami</h1>
+    <p>Mari bangun masa depan digital bersama.</p>
+    <a href="#" class="cta">Mulai Sekarang</a>
+  </section>
 
-        <!-- Tentang Saya -->
-        <section class="about" id="about-section">
-            <img src="suyog.jpg" alt="Foto Profil">
-  
+  <script src="script.js"></script>
+</body>
+</html>
