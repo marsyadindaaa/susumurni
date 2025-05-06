@@ -1,103 +1,90 @@
-/* Reset dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* === Variables === */
+:root {
+  --milk-white: #fffaf0;
+  --milk-orange: #ffa500;
+  --milk-navy: #1a1a40;
+  --text-dark: #333;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
+/* === Base === */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--milk-white);
+  color: var(--text-dark);
 }
 
-/* Navigasi */
-.navbar {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 1rem 2rem;
+  padding: 20px 50px;
+  background: var(--milk-navy);
+  color: white;
 }
 
-.navbar .logo {
-  color: #fff;
-  font-size: 1.5rem;
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+.logo span {
+  color: var(--milk-orange);
 }
 
-.nav-links {
-  list-style: none;
+nav ul {
   display: flex;
+  gap: 20px;
+  list-style: none;
 }
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  color: #fff;
+nav a {
+  color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #f4f4f4;
-}
-
-/* Menu Hamburger */
-.burger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-}
-
-/* Bagian Hero */
 .hero {
-  background: url('hero-image.jpg') center/cover no-repeat;
-  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+.hero-text h1 {
+  font-size: 2.5em;
+}
+.highlight {
+  color: var(--milk-orange);
+}
+.hero-text p {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.hero-image {
+  position: relative;
+}
+.hero-image img {
+  width: 300px;
+}
+.card {
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 10px var(--shadow);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+.susu { top: 10px; right: 10px; }
+.alami { top: 60px; left: -50px; }
+.higienis { bottom: 80px; left: 0; }
+.segar { bottom: 20px; right: 30px; }
+
+footer {
   text-align: center;
-  padding: 5rem 2rem;
+  padding: 20px;
+  background: #eee;
+  font-size: 0.9em;
 }
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.cta {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff6600;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    right: 0;
-    top: 60px;
-    background-color: #333;
-    flex-direction: column;
-    width: 100%;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-
