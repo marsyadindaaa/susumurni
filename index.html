@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Susu Murni D'susu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="logo">Susu<span>Murni</span></div>
-    <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
       <ul>
         <li><a href="#">Beranda</a></li>
         <li><a href="katalog.html">Katalog</a></li>
@@ -19,13 +23,14 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-  <div class="hero-text">
-    <h1>FEEL FRESH!<br>THE <span class="highlight">PURE GOODNESS</span> IS WAITING FOR YOU</h1>
-    <p>Start your day with a glass of 100% pure milk from local farms. Nutritious, fresh, and delivered to your door.</p>
+    <div class="hero-text">
+      <h1>FEEL FRESH!<br>THE <span class="highlight">PURE GOODNESS</span> IS WAITING FOR YOU</h1>
+      <p>Start your day with a glass of 100% pure milk from local farms. Nutritious, fresh, and higienis.</p>
     </div>
     <div class="hero-image">
-      <img src="logo.png" alt="logo">
+      <img src="logo.png" alt="Logo Susu Murni" />
       <div class="card susu">susu murni</div>
       <div class="card alami">alami</div>
       <div class="card higienis">higienis</div>
@@ -33,8 +38,12 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2024 FreshMilk D'susu. All rights reserved.</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
 </body>
 </html>

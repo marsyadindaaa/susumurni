@@ -28,6 +28,7 @@ header {
   font-size: 1.8em;
   font-weight: bold;
 }
+
 .logo span {
   color: var(--milk-orange);
 }
@@ -37,9 +38,15 @@ nav ul {
   gap: 20px;
   list-style: none;
 }
+
 nav a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--milk-orange);
 }
 
 .hero {
@@ -52,12 +59,15 @@ nav a {
 .hero-text {
   max-width: 50%;
 }
+
 .hero-text h1 {
   font-size: 2.5em;
 }
+
 .highlight {
   color: var(--milk-orange);
 }
+
 .hero-text p {
   margin-top: 20px;
   font-size: 1.1em;
@@ -66,9 +76,11 @@ nav a {
 .hero-image {
   position: relative;
 }
+
 .hero-image img {
   width: 300px;
 }
+
 .card {
   position: absolute;
   background: white;
@@ -76,15 +88,102 @@ nav a {
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 0.9em;
+  transition: transform 0.3s ease;
 }
-.susu { top: 10px; right: 10px; }
-.alami { top: 60px; left: -50px; }
-.higienis { bottom: 80px; left: 0; }
-.segar { bottom: 20px; right: 30px; }
 
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.susu {
+  top: 10px;
+  right: 10px;
+  animation: wobble 1s infinite alternate;
+}
+
+.alami {
+  top: 60px;
+  left: -50px;
+  animation: wobble 1s infinite alternate;
+}
+
+.higienis {
+  bottom: 80px;
+  left: 0;
+  animation: wobble 1s infinite alternate;
+}
+
+.segar {
+  bottom: 20px;
+  right: 30px;
+  animation: wobble 1s infinite alternate;
+}
+
+/* === Animation === */
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* === Footer === */
 footer {
   text-align: center;
   padding: 20px;
   background: #eee;
   font-size: 0.9em;
+  color: var(--milk-navy);
+}
+
+/* === Mobile Responsiveness === */
+nav {
+  display: flex;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--milk-navy);
+    padding: 20px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    color: white;
+    padding: 10px 0;
+  }
 }
