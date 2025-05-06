@@ -1,43 +1,59 @@
-<!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Produk - D Susu</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Susu Murni D'susu</title>
+  <link rel="stylesheet" href="katalog.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <header>
-        <h1>D Susu</h1>
-        <nav>
-            <a href="index.html">Beranda</a>
-            <a href="katalog.html">Katalog</a>
-        </nav>
-    </header>
 
-    <section class="katalog">
-        <h2>Katalog Produk</h2>
-        <div class="produk">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Susu Coklat">
-                <h3>Susu Coklat</h3>
-                <p>Rasa manis dan creamy dari coklat asli.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Susu Stroberi">
-                <h3>Susu Stroberi</h3>
-                <p>Segar dan nikmat dengan aroma stroberi.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Susu Vanilla">
-                <h3>Susu Vanilla</h3>
-                <p>Rasa klasik yang lembut dan ringan.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Header -->
+  <header>
+    <div class="logo">Susu<span>Murni</span></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 D Susu. Semua hak dilindungi.</p>
-    </footer>
+   <section class="katalog">
+  <h2>Katalog Produk</h2>
+  <div class="produk">
+    <!-- Sumur Panas/Dingin -->
+    <div class="card"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
+    <div class="card"><h3>Sumur Manis</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Vanilla</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Anggur</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Melon</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Stroberi</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Mocca</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Greentea</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Coklat</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Sumur Madu</h3><p>Harga: 8k</p></div>
+    <div class="card"><h3>Sumur Jahe</h3><p>Harga: 8k</p></div>
+    <div class="card"><h3>Sumur Extra Joss</h3><p>Harga: 8k</p></div>
+    <div class="card"><h3>½ Liter Rasa</h3><p>Harga: 12k</p></div>
+    <div class="card"><h3>½ Liter Tawar</h3><p>Harga: 11k</p></div>
+    <div class="card"><h3>1 Liter Rasa</h3><p>Harga: 22k</p></div>
+    <div class="card"><h3>1 Liter Tawar</h3><p>Harga: 21k</p></div>
+
+    <!-- Roti Bakar Kukus -->
+    <div class="card"><h3>Roti Gula</h3><p>Harga: 6k</p></div>
+    <div class="card"><h3>Roti Susu</h3><p>Harga: 7k</p></div>
+    <div class="card"><h3>Roti Coklat</h3><p>Harga: 7k</p></div>
+    <div class="card"><h3>Roti Stroberi</h3><p>Harga: 7k</p></div>
+    <div class="card"><h3>Roti Kacang</h3><p>Harga: 7k</p></div>
+    <div class="card"><h3>Roti 2 Rasa</h3><p>Harga: 8k</p></div>
+    <div class="card"><h3>Roti 3 Rasa</h3><p>Harga: 9k</p></div>
+    <div class="card"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
+  </div>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
 </body>
 </html>
