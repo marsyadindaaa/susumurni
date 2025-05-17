@@ -8,6 +8,7 @@
 }
 
 /* === Base === */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -229,7 +230,47 @@ nav {
   }
 }
 
-/* === Animation === */
+/* Tombol WhatsApp Mengambang */
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: floaty 2s ease-in-out infinite;
+  z-index: 999;
+}
+/* Tombol Scroll ke Atas */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: var(--milk-orange);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: floaty 2s ease-in-out infinite;
+  z-index: 999;
+}
+
+/* Animasi naik turun */
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
 @keyframes wobble {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(5deg); }
