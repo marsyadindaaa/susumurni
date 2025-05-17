@@ -163,14 +163,17 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* === Footer === */
-footer {
+.lokasi {
+  padding: 40px 20px;
+  background: #f9f9f9;
   text-align: center;
-  padding: 20px;
-  background: #eee;
-  font-size: 0.9em;
-  color: var(--milk-navy);
 }
+
+.lokasi iframe {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
 
 /* === Mobile Responsiveness === */
 nav {
