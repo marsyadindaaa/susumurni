@@ -37,6 +37,8 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -49,15 +51,17 @@ nav a:hover {
   color: var(--milk-orange);
 }
 
+/* === Hero Section === */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 60px 50px;
+  flex-wrap: wrap;
 }
 
 .hero-text {
-  max-width: 50%;
+  max-width: 500px;
 }
 
 .hero-text h1 {
@@ -119,23 +123,44 @@ nav a:hover {
   animation: wobble 1s infinite alternate;
 }
 
-/* === Animation === */
-@keyframes wobble {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+/* === Katalog Section === */
+.katalog {
+  padding: 40px 50px;
+  background: #fff;
+}
+
+.katalog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: var(--milk-navy);
+}
+
+.produk {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card-produk {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.card-produk:hover {
+  transform: translateY(-5px);
+}
+
+.card-produk img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 /* === Footer === */
@@ -183,7 +208,29 @@ nav {
   }
 
   nav a {
-    color: white;
     padding: 10px 0;
   }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+}
+
+/* === Animation === */
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
