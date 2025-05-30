@@ -18,22 +18,31 @@ window.onscroll = function () {
   }
 };
 
-// Form ulasan dinamis
-document.getElementById('ulasanForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("ulasanForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  const nama = document.getElementById('nama').value;
-  const ulasan = document.getElementById('ulasan').value;
+      const nama = document.getElementById("nama").value.trim();
+      const ulasan = document.getElementById("ulasan").value.trim();
 
-  const container = document.getElementById('ulasanBaru');
+      if (!nama || !ulasan) {
+        alert("Nama dan Ulasan wajib diisi!");
+        return;
+      }
 
-  const card = document.createElement('div');
-  card.className = 'card-ulasan';
-  card.innerHTML = `<p>"${ulasan}"</p><h4>– ${nama}</h4>`;
+      const container = document.getElementById("ulasanBaru");
 
-  container.appendChild(card);
+      const card = document.createElement("div");
+      card.className = "card-ulasan";
+      card.innerHTML = `
+      <p>"${ulasan}"</p>
+      <h4>– ${nama}</h4>
+      <button onclick="this.parentElement.remove()">Hapus</button>
+    `;
 
-  // Reset form
-  this.reset();
+      container.appendChild(card);
+      this.reset();
+    });
 });
-
