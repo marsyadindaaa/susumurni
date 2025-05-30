@@ -17,3 +17,23 @@ window.onscroll = function () {
     btn.style.display = "none";
   }
 };
+
+// Form ulasan dinamis
+document.getElementById('ulasanForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nama = document.getElementById('nama').value;
+  const ulasan = document.getElementById('ulasan').value;
+
+  const container = document.getElementById('ulasanBaru');
+
+  const card = document.createElement('div');
+  card.className = 'card-ulasan';
+  card.innerHTML = `<p>"${ulasan}"</p><h4>– ${nama}</h4>`;
+
+  container.appendChild(card);
+
+  // Reset form
+  this.reset();
+});
+
