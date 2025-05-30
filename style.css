@@ -205,6 +205,51 @@ nav a:hover {
   color: #003366;
 }
 
+#form-ulasan {
+  padding: 40px 20px;
+  background-color: #fff7f0;
+  text-align: center;
+}
+
+#form-ulasan form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #ff7a00;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e06400;
+}
+
+#ulasanBaru .card-ulasan {
+  margin-top: 20px;
+}
+
 
 /* === Mobile Responsiveness === */
 nav {
