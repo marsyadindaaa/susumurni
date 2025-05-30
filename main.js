@@ -46,3 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
       this.reset();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ulasanContainer = document.getElementById("ulasanContainer");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  nextBtn.addEventListener("click", () => {
+    ulasanContainer.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    ulasanContainer.scrollBy({ left: -300, behavior: "smooth" });
+  });
+});

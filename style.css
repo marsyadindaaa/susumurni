@@ -175,34 +175,64 @@ nav a:hover {
   border-radius: 12px;
 }
 
-#ulasan {
+.ulasan-section {
   padding: 40px 20px;
-  background-color: #fdfdfd;
+  background-color: #fffaf5;
   text-align: center;
 }
 
-.ulasan-container {
+.ulasan-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  overflow: hidden;
+  gap: 10px;
+  border: 2px solid orange;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+#ulasanContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 20px;
-  margin-top: 20px;
+  width: 80%;
 }
 
 .card-ulasan {
-  background-color: #fff;
-  border: 2px solid #ff7a00;
-  border-radius: 16px;
-  padding: 20px;
-  max-width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  font-style: italic;
+  min-width: 250px;
+  flex-shrink: 0;
+  padding: 15px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
-.card-ulasan h4 {
-  margin-top: 15px;
-  font-style: normal;
-  color: #003366;
+button#prevBtn, button#nextBtn {
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+button#prevBtn:hover,
+button#nextBtn:hover {
+  background-color: darkorange;
 }
 
 #form-ulasan {
