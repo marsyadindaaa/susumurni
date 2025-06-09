@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const container = document.getElementById("ulasanBaru");
+   
 
       const card = document.createElement("div");
       card.className = "card-ulasan";
