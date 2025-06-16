@@ -346,11 +346,6 @@ nav {
 }
 
 /* Tombol WhatsApp Mengambang */
-    body {
-      margin: 0;
-      background: #fffaf5;
-    }
-
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
