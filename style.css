@@ -323,7 +323,7 @@ button#nextBtn:hover {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s ease;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .whatsapp-button:hover {
@@ -350,7 +350,7 @@ button#nextBtn:hover {
   font-size: 18px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   animation: floaty 2s ease-in-out infinite;
-  z-index: 999;
+  z-index: 10000;
 }
 
 /* === Animations === */

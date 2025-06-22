@@ -1,8 +1,9 @@
 
-  function toggleMenu() {
-    const nav = document.getElementById('navbar');
-    nav.classList.toggle('show');
-  }
+function toggleMenu() {
+  const navList = document.querySelector('nav ul');
+  navList.classList.toggle('show');
+}
+
 // Tombol scroll ke atas
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
