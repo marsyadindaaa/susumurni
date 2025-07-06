@@ -30,7 +30,6 @@ include 'config.php';
 $id    = $_POST['id'];
 $nama  = $_POST['nama_produk'];
 $harga = $_POST['harga'];
-$stok  = $_POST['stok'];
 
 $sql = "UPDATE produk SET nama_produk='$nama', harga='$harga', WHERE id=$id";
 
