@@ -32,10 +32,10 @@ $nama  = $_POST['nama_produk'];
 $harga = $_POST['harga'];
 $stok  = $_POST['stok'];
 
-$sql = "UPDATE produk SET nama_produk='$nama', harga='$harga', stok='$stok' WHERE id=$id";
+$sql = "UPDATE produk SET nama_produk='$nama', harga='$harga', WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-  header("Location: index.php"); // kembali ke halaman utama setelah update
+  header("Location: adminindex.php"); // kembali ke halaman utama setelah update
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

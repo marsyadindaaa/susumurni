@@ -12,7 +12,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM produk WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-  header("Location: index.php"); // kembali setelah hapus
+  header("Location: adminindex.php"); // kembali setelah hapus
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
