@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['login'] = true;
 
     // Redirect ke halaman dashboard admin (pastikan file ini ada)
-    header("Location: admin/index.php");
+    header("Location: adminindex.php");
     exit();
   } else {
     $error = "Username atau Password salah";

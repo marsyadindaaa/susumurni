@@ -353,6 +353,33 @@ button#nextBtn:hover {
   z-index: 10000;
 }
 
+#read.php
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+/* === Styles for Admin Section === */
+
 /* === Animations === */
 @keyframes floaty {
   0% { transform: translateY(0); }
