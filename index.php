@@ -89,6 +89,23 @@
         </div>
       </section>
 
+      <!-- ✨ Form Tambah Produk -->
+<section id="form-produk" style="padding: 20px;">
+  <h2>Tambah Produk Baru</h2>
+  <form action="create.php" method="POST">
+    <input type="text" name="nama_produk" placeholder="Nama Produk" required>
+    <input type="number" name="harga" placeholder="Harga (Rp)" required>
+    <input type="number" name="stok" placeholder="Stok" required>
+    <button type="submit">Simpan</button>
+  </form>
+</section>
+
+<!-- ✨ Tampilkan Data Produk dari Database -->
+<section id="data-produk" style="padding: 20px;">
+  <h2>Data Produk Dinamis</h2>
+  <?php include 'read.php'; ?>
+</section>
+
       <section class="ulasan-section">
         <h2>Ulasan Pelanggan</h2>
       
