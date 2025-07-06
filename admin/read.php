@@ -8,7 +8,7 @@ if (!isset($_SESSION['login'])) {
 }
 ?>
 <?php
-include 'config.php';
+include '<admin>config.php';
 
 $result = $conn->query("SELECT * FROM produk");
 
@@ -27,8 +27,8 @@ while ($row = $result->fetch_assoc()) {
     <td>" . $row['nama_produk'] . "</td>
     <td>" . $row['harga'] . "</td>
     <td>
-      <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
-      <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Hapus produk ini?')\">Hapus</a>
+      <a href='admin/edit.php?id=" . $row['id'] . "'>Edit</a> |
+      <a href='admin/delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Hapus produk ini?')\">Hapus</a>
     </td>
   </tr>";
 }
