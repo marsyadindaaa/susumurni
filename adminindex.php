@@ -4,7 +4,6 @@ if (!isset($_SESSION['login'])) {
   header("Location: login.php");
   exit();
 }
-error_reporting(0); // matikan semua error (hati-hati, debugging jadi sulit)
 ?>
 <!DOCTYPE html>
 <html lang="en">
