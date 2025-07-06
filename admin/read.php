@@ -15,7 +15,6 @@ echo "<table border='1' cellpadding='10'>
   <th>No</th>
   <th>Nama Produk</th>
   <th>Harga</th>
-  <th>Stok</th>
   <th>Aksi</th>
 </tr>";
 
@@ -25,7 +24,6 @@ while ($row = $result->fetch_assoc()) {
     <td>" . $no++ . "</td>
     <td>" . $row['nama_produk'] . "</td>
     <td>" . $row['harga'] . "</td>
-    <td>" . $row['stok'] . "</td>
     <td>
       <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
       <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Hapus produk ini?')\">Hapus</a>

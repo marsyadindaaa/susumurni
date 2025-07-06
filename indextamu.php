@@ -72,6 +72,9 @@ session_start();
 
       <section id="katalog">
         <h2>Daftar Menu</h2>
+        <section id="katalog">
+  <h2>Daftar Menu</h2>
+  <?php include 'read_public.php'; ?>
         <div class="produk">
           <!-- Sumur Series -->
           <div class="card-produk"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
@@ -102,24 +105,6 @@ session_start();
           <div class="card-produk"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
         </div>
     </section>
-
-    <?php if (isset($_SESSION['login'])): ?>
-  <!-- ✨ Tampilkan Data Produk dari Database -->
-  <section id="form-produk" style="padding: 20px;">
-    <h2>Tambah Produk Baru</h2>
-    <form action="create.php" method="POST">
-      <input type="text" name="nama_produk" placeholder="Nama Produk" required>
-      <input type="number" name="harga" placeholder="Harga (Rp)" required>
-      <input type="number" name="stok" placeholder="Stok" required>
-      <button type="submit">Simpan</button>
-    </form>
-  </section>
-
-  <section id="data-produk" style="padding: 20px;">
-    <h2>Data Produk Dinamis</h2>
-    <?php include 'read.php'; ?>
-  </section>
-<?php endif; ?>
 
 
       <section class="ulasan-section">

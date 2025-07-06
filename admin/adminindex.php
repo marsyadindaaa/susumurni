@@ -115,7 +115,7 @@ if (!isset($_SESSION['login'])) {
 <!-- ✨ Tampilkan Data Produk dari Database -->
 <section id="data-produk" style="padding: 20px;">
   <h2>Data Produk Dinamis</h2>
-  <?php include 'read.php'; ?>
+  <?php include 'admin/read.php'; ?>
 </section>
 
       <section class="ulasan-section">
