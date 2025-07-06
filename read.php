@@ -25,10 +25,3 @@ while ($row = $result->fetch_assoc()) {
     </td>
   </tr>";
 }
-
-echo "</table>";
-$conn->close();
-?>
-<?php
-echo "read.php berhasil dipanggil<br>";
-include 'config.php';
