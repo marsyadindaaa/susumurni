@@ -27,12 +27,9 @@ session_start();
         <li><a href="#lokasi">Lokasi</a></li>
         <a href="logout.php">Logout</a>
 
-        <nav id="navbar">
-  <ul>
-    <li><a href="index.html">Beranda</a></li>
-    <li><a href="#Beranda">Tentang</a></li>
-    <li><a href="#katalog">Katalog</a></li>
-    <li><a href="#lokasi">Lokasi</a></li>
+        <?php if (!isset($_SESSION['login'])): ?>
+  <li><a href="login.php">Login Admin</a></li>
+<?php endif; ?>
 
     <?php if (isset($_SESSION['login'])): ?>
       <li><a href="logout.php">Logout</a></li>
