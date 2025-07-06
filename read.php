@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
     <td>" . $no++ . "</td>
     <td>" . $row['nama_produk'] . "</td>
     <td>" . $row['harga'] . "</td>
-    <td>" . $row['stok'] . "</td>
+    <td>" . $row['stok'] . "</td>/
     <td>
       <a href='edit.php?id=" . $row['id'] . "'>Edit</a> |
       <a href='delete.php?id=" . $row['id'] . "' onclick=\"return confirm('Hapus produk ini?')\">Hapus</a>

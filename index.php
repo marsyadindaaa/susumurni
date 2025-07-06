@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+  header("Location: login.php");
+  exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +29,7 @@
         <li><a href="#Beranda">Tentang</a></li>
         <li><a href="#katalog">Katalog</a></li>
         <li><a href="#lokasi">Lokasi</a></li>
+        <a href="logout.php">Logout</a>
       </ul>
     </nav>
   </header>
