@@ -21,7 +21,6 @@ $data = $result->fetch_assoc();
   
   <input type="text" name="nama_produk" value="<?= $data['nama_produk'] ?>" required>
   <input type="number" name="harga" value="<?= $data['harga'] ?>" required>
-  <input type="number" name="stok" value="<?= $data['stok'] ?>" required>
   <button type="submit">Update</button>
 </form>
 <?php
