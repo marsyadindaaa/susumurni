@@ -3,15 +3,6 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $user = $_POST['username'];
   $pass = $_POST['password'];
-
-  // Contoh sederhana login
-  if ($user == "admin" && $pass == "1234") {
-    $_SESSION['login'] = true;
-    header("Location: admin.php");
-    exit();
-  } else {
-    $error = "Username atau Password salah";
-  }
 }
 ?>
 
