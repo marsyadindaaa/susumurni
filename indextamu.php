@@ -74,7 +74,6 @@ session_start();
         <h2>Daftar Menu</h2>
         <section id="katalog">
   <h2>Daftar Menu</h2>
-  <?php include 'read_public.php'; ?>
         <div class="produk">
           <!-- Sumur Series -->
           <div class="card-produk"><h3>Sumur Tawar</h3><p>Harga: 5k</p></div>
