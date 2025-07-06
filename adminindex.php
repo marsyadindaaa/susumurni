@@ -104,7 +104,7 @@ if (!isset($_SESSION['login'])) {
       <!-- ✨ Form Tambah Produk -->
 <section id="form-produk" style="padding: 20px;">
   <h2>Tambah Produk Baru</h2>
-  <form action="create.php" method="POST">
+  <form action="admin/create.php" method="POST">
     <input type="text" name="nama_produk" placeholder="Nama Produk" required>
     <input type="number" name="harga" placeholder="Harga (Rp)" required>
     <button type="submit">Simpan</button>
