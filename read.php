@@ -25,3 +25,6 @@ while ($row = $result->fetch_assoc()) {
     </td>
   </tr>";
 }
+
+echo "</table>"; // ← tambahkan ini
+?>
