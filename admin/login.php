@@ -1,29 +1,29 @@
 <?php
 session_start();
-include 'config.php';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $username = $_POST['username'];
-  $password = md5($_POST['password']);
+  $user = $_POST['username'];
+  $pass = $_POST['password'];
 
-  $result = $conn->query("SELECT * FROM admin WHERE username='$username' AND password='$password'");
-  
-  if ($result->num_rows > 0) {
+  // Contoh sederhana login
+  if ($user == "admin" && $pass == "1234") {
     $_SESSION['login'] = true;
-    header("Location: index.php");
+    header("Location: admin.php");
+    exit();
   } else {
-    $error = "Login gagal. Username atau password salah.";
+    $error = "Username atau Password salah";
   }
 }
 ?>
 
 <!DOCTYPE html>
 <html>
-<head><title>Login Admin</title></head>
+<head>
+  <title>Login Admin</title>
+</head>
 <body>
   <h2>Login Admin</h2>
   <?php if (isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-  <form method="post">
+  <form method="POST" action="">
     <input type="text" name="username" placeholder="Username" required><br><br>
     <input type="password" name="password" placeholder="Password" required><br><br>
     <button type="submit">Login</button>
