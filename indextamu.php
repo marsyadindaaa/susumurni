@@ -101,11 +101,10 @@ session_start();
           <div class="card-produk"><h3>Roti 3 Rasa</h3><p>Harga: 9k</p></div>
           <div class="card-produk"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
         </div>
-      </section>
+    </section>
 
-      <!-- ✨ Form Tambah Produk -->
-<secti<?php if (isset($_SESSION['login'])): ?>
-  <!-- ✨ Form Tambah Produk -->
+    <?php if (isset($_SESSION['login'])): ?>
+  <!-- ✨ Tampilkan Data Produk dari Database -->
   <section id="form-produk" style="padding: 20px;">
     <h2>Tambah Produk Baru</h2>
     <form action="create.php" method="POST">
@@ -116,12 +115,12 @@ session_start();
     </form>
   </section>
 
-  <!-- ✨ Tampilkan Data Produk dari Database -->
   <section id="data-produk" style="padding: 20px;">
     <h2>Data Produk Dinamis</h2>
     <?php include 'read.php'; ?>
   </section>
 <?php endif; ?>
+
 
       <section class="ulasan-section">
         <h2>Ulasan Pelanggan</h2>
