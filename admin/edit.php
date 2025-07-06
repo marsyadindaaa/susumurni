@@ -6,7 +6,7 @@ if (!isset($_SESSION['login'])) {
 }
 ?>
 <?php
-include 'config.php';
+include '<admin>config.php';
 
 // Ambil data berdasarkan ID
 $id = $_GET['id'];
