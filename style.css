@@ -5,6 +5,8 @@
   --milk-navy: #1a1a40;
   --text-dark: #333;
   --shadow: rgba(0, 0, 0, 0.1);
+  --gradient-orange: linear-gradient(135deg, #ffd580, #ffa500);
+  --gradient-navy: linear-gradient(135deg, #1a1a40, #2e2e60);
 }
 
 /* === Base === */
@@ -16,6 +18,7 @@ body {
   color: var(--text-dark);
 }
 
+/* === Header === */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,6 +26,7 @@ header {
   padding: 20px 50px;
   background: var(--milk-navy);
   color: white;
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 .logo {
@@ -59,6 +63,8 @@ nav a:hover {
   align-items: center;
   padding: 60px 50px;
   flex-wrap: wrap;
+  background: var(--milk-white);
+  border-radius: 0 0 20px 20px;
 }
 
 .hero-text {
@@ -67,10 +73,12 @@ nav a:hover {
 
 .hero-text h1 {
   font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
 .highlight {
-  color: var(--milk-orange);
+  color: var(--milk-navy);
+  font-weight: bold;
 }
 
 .hero-text p {
@@ -88,12 +96,13 @@ nav a:hover {
 
 .card {
   position: absolute;
-  background: white;
+  background: linear-gradient(135deg, #fff4dc, #ffeabf);
   box-shadow: 0 4px 10px var(--shadow);
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 0.9em;
   transition: transform 0.3s ease;
+  color: var(--milk-navy);
 }
 
 .card:hover {
@@ -124,6 +133,17 @@ nav a:hover {
   animation: wobble 1s infinite alternate;
 }
 
+.Beranda{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  flex-wrap: wrap;
+  background: var(--gradient-orange);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 6px 12px var(--shadow);
+}
+
 /* === Katalog Section === */
 .katalog {
   padding: 40px 50px;
@@ -144,26 +164,28 @@ nav a:hover {
 }
 
 .card-produk {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #fff4dc, #ffeabf);
+  border-radius: 12px;
   text-align: center;
   padding: 15px;
-  box-shadow: 0 2px 6px var(--shadow);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .card-produk:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-produk img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
+/* === Lokasi === */
 .lokasi {
   padding: 40px 20px;
   background: #f9f9f9;
@@ -175,6 +197,7 @@ nav a:hover {
   border-radius: 12px;
 }
 
+/* === Ulasan Section === */
 .ulasan-section {
   padding: 40px 20px;
   background-color: #fffaf5;
@@ -187,11 +210,10 @@ nav a:hover {
   justify-content: center;
   overflow: hidden;
   gap: 10px;
-  border: 2px solid orange;
   border-radius: 15px;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: var(--gradient-orange);
+  box-shadow: 0 0 10px var(--shadow);
   margin: 20px auto;
   width: 90%;
   max-width: 1000px;
@@ -209,11 +231,16 @@ nav a:hover {
   min-width: 250px;
   flex-shrink: 0;
   padding: 15px;
-  border: 2px solid orange;
   border-radius: 10px;
-  background-color: white;
+  background: white;
   text-align: center;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-ulasan:hover {
+  transform: translateY(-8px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
 }
 
 button#prevBtn, button#nextBtn {
@@ -235,67 +262,7 @@ button#nextBtn:hover {
   background-color: darkorange;
 }
 
-#form-ulasan {
-  padding: 40px 20px;
-  background-color: #fff7f0;
-  text-align: center;
-}
-
-#form-ulasan form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-group {
-  text-align: left;
-}
-
-input[type="text"], textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-button[type="submit"] {
-  background-color: #ff7a00;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #e06400;
-}
-
-#ulasanBaru .card-ulasan {
-  margin-top: 20px;
-}
-
-.card-ulasan button {
-  margin-top: 10px;
-  background-color: #ff4d4d;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-}
-
-
-/* === Mobile Responsiveness === */
-nav {
-  display: flex;
-}
-
+  /* Default: tidak terlihat di desktop */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -305,30 +272,28 @@ nav {
   cursor: pointer;
 }
 
+/* Tampilkan toggle hanya di layar kecil */
 @media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    background: var(--milk-navy);
-    padding: 20px;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
   .menu-toggle {
     display: block;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px;
+    display: none;
+    background: rgba(255, 108, 63, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
   }
 
-  nav a {
-    padding: 10px 0;
+  nav ul.show {
+    display: flex;
   }
+}
+
 
   .hero {
     flex-direction: column;
@@ -343,9 +308,13 @@ nav {
   .hero-image img {
     margin-top: 20px;
   }
-}
 
 /* Tombol WhatsApp Mengambang */
+    body {
+      margin: 0;
+      background: #fffaf5;
+    }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -362,15 +331,16 @@ nav {
       z-index: 1000;
     }
 
-    .whatsapp-button:hover {
-      transform: scale(1.1);
-    }
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
 
-    .whatsapp-button img {
-      width: 30px;
-      height: 30px;
-    }
-/* Tombol Scroll ke Atas */
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+
+/* === Scroll to Top Button === */
 #scrollTopBtn {
   position: fixed;
   bottom: 100px;
@@ -388,7 +358,7 @@ nav {
   z-index: 999;
 }
 
-/* Animasi naik turun */
+/* === Animations === */
 @keyframes floaty {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }

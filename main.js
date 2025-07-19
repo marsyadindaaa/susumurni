@@ -19,35 +19,6 @@ window.onscroll = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("ulasanForm")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nama = document.getElementById("nama").value.trim();
-      const ulasan = document.getElementById("ulasan").value.trim();
-
-      if (!nama || !ulasan) {
-        alert("Nama dan Ulasan wajib diisi!");
-        return;
-      }
-
-      const container = document.getElementById("ulasanBaru");
-
-      const card = document.createElement("div");
-      card.className = "card-ulasan";
-      card.innerHTML = `
-      <p>"${ulasan}"</p>
-      <h4>– ${nama}</h4>
-      <button onclick="this.parentElement.remove()">Hapus</button>
-    `;
-
-      container.appendChild(card);
-      this.reset();
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const ulasanContainer = document.getElementById("ulasanContainer");
   const nextBtn = document.getElementById("nextBtn");
   const prevBtn = document.getElementById("prevBtn");
