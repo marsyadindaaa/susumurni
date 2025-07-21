@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,9 @@
   <title>Susu Murni D'susu</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="google-site-verification" content="p4LnLK8xOXKKNxaK-VvemHDkhF_9k9GsjejX6jdRmGY" />
+  <meta name="google-site-verification" content="google-site-verification: googleb8c25eb679e7a1c6.html" />
+
 </head>
 <body>
 
@@ -19,6 +25,17 @@
         <li><a href="#Beranda">Tentang</a></li>
         <li><a href="#katalog">Katalog</a></li>
         <li><a href="#lokasi">Lokasi</a></li>
+        <a href="logout.php">Logout</a>
+
+        <?php if (!isset($_SESSION['login'])): ?>
+  <li><a href="login.php">Login Admin</a></li>
+<?php endif; ?>
+
+    <?php if (isset($_SESSION['login'])): ?>
+      <li><a href="logout.php">Logout</a></li>
+    <?php endif; ?>
+  </ul>
+</nav>
       </ul>
     </nav>
   </header>
@@ -84,7 +101,8 @@
           <div class="card-produk"><h3>Roti 3 Rasa</h3><p>Harga: 9k</p></div>
           <div class="card-produk"><h3>Roti Keju</h3><p>Harga: 8k</p></div>
         </div>
-      </section>
+    </section>
+
 
       <section class="ulasan-section">
         <h2>Ulasan Pelanggan</h2>
